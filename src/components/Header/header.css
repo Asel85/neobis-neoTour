@@ -1,0 +1,28 @@
+ .header{
+        padding-top: 190px;
+        background:linear-gradient(#D0CBFF,#ffff)
+    }
+    .header__block{
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header__title{
+        font-size: 5rem;
+        font-weight: 900;
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .header__text{
+        font-size: 1.3rem;
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .header__button{
+        cursor: pointer;
+    }
