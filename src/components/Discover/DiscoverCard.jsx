@@ -7,10 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const DiscoverCard = ({dataTrip}) => {
   return (
-      //<div className="card">
-       // <img src={info.imageUrl} alt="" className="card__img" />
-       // <div className="card__destination">{info.destination}</div>
-     // </div>
      <Swiper
       modules={[Navigation, A11y]}
       spaceBetween={50}

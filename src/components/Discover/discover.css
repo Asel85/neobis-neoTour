@@ -1,5 +1,5 @@
 .discover{
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 }
 .discover__title{
@@ -40,7 +40,7 @@
     flex-wrap: wrap;
 }
 .card{
-    max-width: 385px;
+    max-width: 30%;
     width: 100%;
     position: relative;
     margin-bottom:20px ;

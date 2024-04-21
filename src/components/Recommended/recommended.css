@@ -1,0 +1,17 @@
+
+.recommended{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.recommended__title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
