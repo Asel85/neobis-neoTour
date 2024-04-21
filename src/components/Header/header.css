@@ -1,5 +1,6 @@
  .header{
         padding-top: 190px;
+        padding-bottom: 190px;
         background:linear-gradient(#D0CBFF,#ffff)
     }
     .header__block{
@@ -25,4 +26,13 @@
     }
     .header__button{
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        font-weight: 700;
+
+    }
+    .header__button span{
+        font-size: 2rem;
+        color: #ffff;
     }
