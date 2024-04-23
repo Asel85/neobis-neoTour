@@ -1,16 +1,24 @@
 import Discover from "./components/Discover/Discover";
-import DiscoverCard from "./components/Discover/DiscoverCard";
 import Header from "./components/Header/Header";
 import Recommended from "./components/Recommended/Recommended";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Details from "./pages/Details";
 
 
 function App() {
   return (
-    <div>
+    
+      <Router>
+        <div>
       <Header/>
       <Discover/>
       <Recommended/>
-    </div>
+      <Routes>
+        <Route path="/:id" element={<Details/>} />
+      </Routes>
+      </div>
+      </Router>
+    
   );
 }
 
