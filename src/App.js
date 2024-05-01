@@ -10,10 +10,8 @@ function App() {
     
       <Router>
         <div>
-      <Header/>
-      <Discover/>
-      <Recommended/>
       <Routes>
+        <Route path="/"  element={<Discover/>} />
         <Route path="/:id" element={<Details/>} />
       </Routes>
       </div>

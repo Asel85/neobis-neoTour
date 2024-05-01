@@ -1,6 +1,6 @@
 import React from 'react'
 import "./header.css";
-import svg from "../../assets/Arrow 1.svg";
+import svg from "../../assets/Arrow-next.svg";
 import headerImage from "../../assets/Frame 25.png";
 
 const Header = () => {

@@ -6,6 +6,9 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .discover__items{
     display: flex;
@@ -60,3 +63,63 @@
     font-size: 1.5rem;
     font-weight: 700;
 }
+.discover__btns {
+    display: flex;
+    align-items: center;
+ 
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+ }
+ 
+ .discover__btns button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: background-color 0.15s ease-in-out;
+ }
+ 
+ .discover__btns button svg {
+    width: 2rem;
+    height: 1rem;
+ 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .discover__btns button svg path {
+    fill: #000;
+ }
+ 
+ .discover__btns button:hover,
+ .discover__btns button:active {
+    background-color: #b2aafd;
+ }
+ 
+ .discover__btns button:hover svg path,
+ .discover__btns button:active svg path {
+    fill: #fff;
+ }
+ 
+ .discover__btns button:disabled {
+    background-color: #f6f5f5;
+    cursor: default;
+ }
+ 
+ .discover__btns button:disabled:hover,
+ .discover__btns button:disabled:active {
+    background-color: #f6f5f5;
+ }
+ 
+ .discover__btns button:disabled:hover svg path,
+ .discover__btns button:disabled:active svg path {
+    fill: #000;
+ }
+ 

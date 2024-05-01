@@ -1,0 +1,79 @@
+.detailTour__img{
+    width: 100%;
+    height: 70%;
+}
+.detailTour{
+    position: relative;
+}
+.detailTour__btn{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.detailTour__btn span{
+    color: #ffff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.detailTour__body{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.detailTour__title{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.detailTour__location{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 4rem;
+}
+.detailTour__location div{
+    font-size: 1rem;
+}
+.detailTour__country{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.detailTour__text{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.reviews{
+    margin-bottom: 2rem;
+}
+.reviews__title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;   
+}
+.reviews__content{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 1rem;
+}
+.reviews__username{
+    font-size: 1rem;
+}
+.reviews__comment{
+    font-size: 1rem;
+}
+.detailTour__button{
+    width: 100%;
+    padding: 10px;
+    background-color: #6A62B7;
+    color: #ffff;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 5rem;
+}
