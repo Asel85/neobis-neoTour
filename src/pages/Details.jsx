@@ -5,13 +5,15 @@ import avatar from "../assets/username.png";
 import "./details.css";
 import svg from "../assets/Arrow-prev.svg";
 import location from "../assets/location.svg";
+import ReservModal from '../reservModal/ReservModal';
 
 const Details = () => {
   const {id} = useParams();
   const [detailTrip, setDetailTrip] = useState({});
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(()=>{
-   const getDetailTrip = async (e)=>{
+   const getDetailTrip = async ()=>{
 
     try{
       const result = await axios.get(`https://phobic-honey-production.up.railway.app/api/trips/${id}`);
@@ -56,7 +58,12 @@ const Details = () => {
       )
     })
     }
-    <button className='detailTour__button'>Book now</button>
+    <button onClick={()=>{setOpenModal(true)}} className='detailTour__button'>Book now</button>
+    {
+      openModal && (
+      <ReservModal openModal={openModal} setOpenModal={setOpenModal}/>
+      )
+    }
     </div>
      </div>
   )
