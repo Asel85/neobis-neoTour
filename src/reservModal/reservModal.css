@@ -112,4 +112,7 @@ input[type=tel]{
   cursor: pointer;
   margin-top: 5rem;
 }
+.modal__button:hover:focus{
+  background-color: #B4B0DA;
+}
  

@@ -28,9 +28,7 @@ const Details = () => {
   },[id])
   return (
     <div className="detailTour">
-      {detailTrip && detailTrip.images && (
-        <img className='detailTour__img' src={detailTrip.images[0]} alt={detailTrip.destination} />
-      )}
+      <div className='detailTour__img' style={{backgroundImage: (`url(${detailTrip.images && detailTrip.images[0]})`)}}/>
      <a href="/" className="detailTour__btn">
           <img src={svg} alt="icon"  />
           <span>Go back</span>
@@ -61,7 +59,7 @@ const Details = () => {
     <button onClick={()=>{setOpenModal(true)}} className='detailTour__button'>Book now</button>
     {
       openModal && (
-      <ReservModal openModal={openModal} setOpenModal={setOpenModal}/>
+      <ReservModal openModal={openModal} setOpenModal={setOpenModal} id={detailTrip.id}/>
       )
     }
     </div>

@@ -4,23 +4,59 @@ import close from "../assets/close.svg";
 import user from "../assets/uil_user.svg";
 import PhoneInput from 'react-phone-number-input';
 import "react-phone-number-input/style.css";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-const ReservModal = ({openModal, setOpenModal}) => {
+const ReservModal = ({openModal, setOpenModal, id}) => {
   const [value, setValue] = useState("");
   const [comment, setComment] = useState("");
-  const [counter, setCounter] = useState("1");
+  const [counter, setCounter] = useState(1);
+  const [open, setOpen] = useState("false");
+  const navigate = useNavigate();
 
   const onClickPlus = (e)=>{
     e.preventDefault();
-  setCounter(counter + 1)
+    if(counter<6){
+      setCounter(counter + 1)
+    }
+  
   }
 
   const onClickMinus = (e)=>{
     e.preventDefault();
-    counter<5 &&
-    setCounter(counter - 1)
-    
+    if(counter>1){
+      setCounter(counter - 1)
+    }
   }
+
+    const sendData = async(data)=>{
+      try {
+        const response =  await axios.post("https://phobic-honey-production.up.railway.app/api/bookings/book",data);
+        if(!response.data) {
+          throw new Error("Error")
+        }
+        return response.data
+      } catch (error) {
+          console.log("error",error);
+          alert("Error")
+      }
+    }
+    const handleSubmit = (e) =>{
+      e.preventDefault();
+      //console.log(value,comment,counter)
+      const data = {
+          tripId: id,
+          phoneNumber: value,
+          numberOfPeople: counter,
+          comment: comment 
+      }
+      alert("Your trip has been booked!");
+      sendData(data)
+      navigate("/");
+    }
+   
+    
+  
   return (
     <div className="overlay">
       <div className="modal">
@@ -29,7 +65,7 @@ const ReservModal = ({openModal, setOpenModal}) => {
           <img src={close} alt="close" onClick={()=>{setOpenModal(false)}} />
         </div>
         <div className="modal__text">To submit an application for a tour reservation, you need to fill in your information and select the number of people for the reservation</div>
-        <form action="" className="modal__form">
+        <form onSubmit={handleSubmit} className="modal__form">
         <label className='input__title'>Phone number</label>
         <PhoneInput className='phoneInput'
         defaultCountry="KG"
@@ -40,6 +76,7 @@ const ReservModal = ({openModal, setOpenModal}) => {
         onChange={value=>setValue(value)}/>
         <label className='input__title'>Commentaries to trip</label>
         <input 
+        required
         type="text"
         placeholder='Write your wishes to trip...' 
         className="input__comment"

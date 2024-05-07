@@ -1,6 +1,10 @@
 .detailTour__img{
     width: 100%;
-    height: 70%;
+    height: 85vh;
+    background-color: grey;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 .detailTour{
     position: relative;
